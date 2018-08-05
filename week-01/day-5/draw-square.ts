@@ -26,5 +26,5 @@ for (let i: number = 0; i <= lineCount; i++) {
         }
     }
     console.log(line);
-    line= ''; 
+    line = ''; 
 }

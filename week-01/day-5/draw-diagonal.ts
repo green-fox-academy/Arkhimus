@@ -18,11 +18,9 @@ let a: string = '%';
 let b: string = ' ';
 let line: string = '';
 
-for (let i: number = 0; i <= lineCount; i++) {
-    for (let j: number = 0; j <= lineCount; j++) {
-        if (i ==  0 || i == lineCount || j == 0 || j == lineCount) {
-            line = line + a;
-        } else if (i == line.length && j == line.length) {
+for (let i: number = 0; i <= lineCount - 1; i++) {
+    for (let j: number = 0; j <= lineCount -1; j++) {
+        if (i ==  0 || i == lineCount -1 || j == 0 || j == lineCount -1 || i == j) {
             line = line + a;
         } else {
             line = line + b;
