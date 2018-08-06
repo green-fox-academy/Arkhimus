@@ -8,8 +8,9 @@ export{}
 
 let name: string = 'Greenfox';
 
-function greet(gr: string) {
-    gr = 'Greetings, dear ' + name;
-    return gr;
+let greet = function (gr: string = 'Greetings dear nameless person ;)') {
+    console.log('Greetings, dear ' + gr);
 }
-console.log(greet(name));
+
+greet(name);
+greet();
