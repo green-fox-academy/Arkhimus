@@ -3,7 +3,7 @@
 
 export{}
 
-let mustSum: number = 6;
+let mustSum: number = 4;
 
 function sum (num: number) {
     let j: number = 0;
