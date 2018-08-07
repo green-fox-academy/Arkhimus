@@ -35,7 +35,7 @@ function sumCandies (list: any[]){
 console.log(sumCandies(students));
 */
 
-/*
+/* WHHHHHHYYY is the result undefined????!!!!4444!!4!!!44(négy)!!!
 function ageSum(listed: any[]) {
     let ageTemp: number = 0;
     listed.forEach((element) => {

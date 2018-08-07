@@ -11,8 +11,3 @@ console.log(example);
 let replacedExample: string = example.replace('dishwasher', 'galaxy');
 console.log(replacedExample);
 
-/*
-let replace = /dishwasher/;
-let newExample = example.replace(replace, 'galaxy');
-console.log(newExample);
-*/
