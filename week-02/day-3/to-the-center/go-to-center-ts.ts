@@ -9,10 +9,15 @@ const ctx = canvas.getContext('2d');
 // and draws a line from that point to the center of the canvas
 // Draw 3 lines with that function. Use loop for that.
 
-let startX: number = 123;
-let startY: number = 342;
+let startX: number = Math.floor((Math.random() * 300) + 1);
+let startY: number = Math.floor((Math.random() * 200) + 1);
+let lineCount: number = 3;
 
-ctx.beginPath();
-ctx.moveTo(startX,startY);
-ctx.lineTo(300,200);
-ctx.stroke();
+for (let i: number = 0; i < lineCount; i++) {
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+    ctx.lineTo(300, 200);
+    ctx.stroke();
+    startX += Math.floor((Math.random() * 100) + 1);
+    startY += Math.floor((Math.random() * 75) + 1);
+}
