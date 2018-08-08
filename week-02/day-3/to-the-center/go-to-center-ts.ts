@@ -13,6 +13,7 @@ let startX: number = Math.floor((Math.random() * 300) + 1);
 let startY: number = Math.floor((Math.random() * 200) + 1);
 let lineCount: number = 3;
 
+function toCenter(x: number){
 for (let i: number = 0; i < lineCount; i++) {
     ctx.beginPath();
     ctx.moveTo(startX, startY);
@@ -21,3 +22,5 @@ for (let i: number = 0; i < lineCount; i++) {
     startX += Math.floor((Math.random() * 100) + 1);
     startY += Math.floor((Math.random() * 75) + 1);
 }
+}
+toCenter(lineCount);
