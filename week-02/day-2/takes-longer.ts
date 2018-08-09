@@ -13,3 +13,8 @@ let insertIndex: number = tempQuote.indexOf('It');
 tempQuote.splice(insertIndex + 1, 0, 'always takes longer than');
 quote = tempQuote.join(' ');
 console.log(quote);
+
+// Version two:
+
+quote.replace('It', 'It always takes longer than');
+console.log(quote);
