@@ -5,9 +5,12 @@
 //	   -  do it with creating a new temp array and a loop
 // -  Print the elements of the reversed `numList`
 
-let numList: number [] = [3, 4, 5, 6, 7];
+let numList: number[] = [3, 4, 5, 6, 7];
 numList.reverse();
 
 let tempArr: number[];
+for (let i: number = numList.length; i >= 0; i--) {
+    tempArr.push(numList[i]);
+}
 
 console.log(numList);
