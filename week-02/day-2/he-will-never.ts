@@ -19,5 +19,4 @@ let hashmap = {
 for (let i: number = 0; i < notSoCrypticMessage.length; i++){
     out = out.concat(hashmap[(notSoCrypticMessage[i])]);
 }
-console.log(out)
-
+console.log(out);
