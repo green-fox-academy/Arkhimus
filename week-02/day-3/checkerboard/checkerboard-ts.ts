@@ -8,7 +8,7 @@ const ctx = canvas.getContext('2d');
 
 let x: number = 0;
 let y: number = 0;
-let size: number = 20; //kb. 30-as loop kell
+let size: number = 40; //kb. 30-as loop kell
 
 for (let i: number = 0; i < size; i++) {
     ctx.fillRect(x, y, size, size);
