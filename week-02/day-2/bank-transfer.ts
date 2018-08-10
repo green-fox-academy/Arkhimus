@@ -27,15 +27,15 @@ const accounts: any[] = [
 //	{ clientName: 'Sergei', accountNumber: 23456311, balance: 1354100.0 }
 //]
 
-function getNameAndBalance(accNumb: any ,list: any []){
-    list.forEach(element => {
-        if (element.accountNumber === getNameAndBalance.accNumb){
+function getNameAndBalance(accNumb: number ){
+    accounts.forEach(element => {
+        if (accNumb == accounts["accountNumber"]){
             console.log(element.clientName, element.balance);
         } else {
             console.log('404 - account not found');
         }
     });
-    return element;
+    //return element;
 }
 getNameAndBalance(11234543);
 
