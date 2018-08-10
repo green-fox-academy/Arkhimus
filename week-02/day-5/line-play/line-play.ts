@@ -7,7 +7,7 @@ let cw: number = 640;
 let step: number = 40;
 let start: number = 0;
 
-function drawGreenLines(canvasWidth: number, steps: number, startPoint: number) {
+function drawGreenAndPurpleLines(canvasWidth: number, steps: number, startPoint: number) {
     for (let i: number = 0; i < steps; i++) {
         ctx.beginPath();
         ctx.strokeStyle = 'green';
@@ -15,9 +15,18 @@ function drawGreenLines(canvasWidth: number, steps: number, startPoint: number) 
         ctx.lineTo(steps * i - steps, canvasWidth);
         ctx.stroke();
     }
+    for (let i: number = 0; i < steps; i++) {
+        ctx.beginPath();
+        ctx.strokeStyle = 'purple';
+        ctx.moveTo(canvasWidth - (steps * i-steps), startPoint);
+        ctx.lineTo(canvasWidth, canvasWidth - steps * (i + 1));
+        ctx.stroke();
+    }
 }
-drawGreenLines(cw, step, start);
+drawGreenAndPurpleLines(cw, step, start);
 
+
+/*
 function drawPurpleLines(canvasWidth: number, steps: number, startPoint: number) {
     for (let i: number = 0; i < steps; i++) {
         ctx.beginPath();
@@ -28,3 +37,4 @@ function drawPurpleLines(canvasWidth: number, steps: number, startPoint: number)
     }
 }
 drawPurpleLines(cw, step, start);
+*/
