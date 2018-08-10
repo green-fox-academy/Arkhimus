@@ -24,17 +24,3 @@ function drawGreenAndPurpleLines(canvasWidth: number, steps: number, startPoint:
     }
 }
 drawGreenAndPurpleLines(cw, step, start);
-
-
-/*
-function drawPurpleLines(canvasWidth: number, steps: number, startPoint: number) {
-    for (let i: number = 0; i < steps; i++) {
-        ctx.beginPath();
-        ctx.strokeStyle = 'purple';
-        ctx.moveTo(canvasWidth - (steps * i-steps), startPoint);
-        ctx.lineTo(canvasWidth, canvasWidth - steps * (i + 1));
-        ctx.stroke();
-    }
-}
-drawPurpleLines(cw, step, start);
-*/

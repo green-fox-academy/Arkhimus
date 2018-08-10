@@ -10,7 +10,7 @@ const ctx = canvas.getContext('2d');
 let startx: number = Math.fround((Math.random() * 550) + 1);
 let starty: number = Math.fround((Math.random() * 350) + 1);
 let rct: number = Math.fround((Math.random() * 50) + 1);
-let rectCount = 4;
+let rectCount = 20;
 
 function drawRect(counter: number) {
     for (let i: number = 0; i < rectCount; i++) {
