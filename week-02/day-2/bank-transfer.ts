@@ -21,16 +21,13 @@ function getNameAndBalance(element: number) {
 getNameAndBalance(11234543);
 
 function transferAmount(list: any, to: number, from: number, amount: number) {
-    let error: string;
     for (let j: number = 0; j < list.length; j++) {
         if (list[j]['accountNumber'] == to) {
             list[j]['balance'] = list[j]['balance'] + amount;
         } else if (list[j]['accountNumber'] == from) {
             list[j]['balance'] = list[j]['balance'] - amount;
-        } else if (list.indexOf([j]['accountNumber']) !== to || list.indexOf([j]['accountNumber']) !== from) {
-            error = ('404 - account not found');
         }
-    }
+    } 
     console.log(list);
 }
 transferAmount(accounts, 43546731, 23456311, 500.0);
