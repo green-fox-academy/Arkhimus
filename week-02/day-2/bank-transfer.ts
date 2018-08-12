@@ -1,5 +1,3 @@
-export { }
-
 'use strict';
 
 const accounts: any[] = [
@@ -8,6 +6,17 @@ const accounts: any[] = [
     { clientName: 'Sergei', accountNumber: 23456311, balance: 1353600.0 }
 ];
 
+function getNameAndBalance(element: number) {
+    for (let i: number = 0; i < accounts.length; i++) {
+        if (accounts[i]['accountNumber'] == element) {
+            //return accounts[i]['clientName'], accounts[i]['balance'];
+            console.log(accounts[i]['clientName'], accounts[i]['balance']);
+        } else {
+            console.log('wtf');
+        }
+    }
+}
+getNameAndBalance(11234543);
 // Create function that returns the name and balance of cash on an account in a list
 // getNameAndBalance(11234543);
 // should return: ['Igor', 203004099.2]
@@ -27,21 +36,11 @@ const accounts: any[] = [
 //	{ clientName: 'Sergei', accountNumber: 23456311, balance: 1354100.0 }
 //]
 
-function getNameAndBalance(accNumb: number ){
-    accounts.forEach(element => {
-        if (accNumb == accounts["accountNumber"]){
-            console.log(element.clientName, element.balance);
-        } else {
-            console.log('404 - account not found');
-        }
-    });
-    //return element;
-}
-getNameAndBalance(11234543);
 
-
+/*
 export = {
-    getNameAndBalance,
-    transferAmount,
-    accounts
+  getNameAndBalance,
+  transferAmount,
+  accounts
 };
+*/
