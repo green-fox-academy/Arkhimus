@@ -7,15 +7,35 @@ const accounts: any[] = [
 ];
 
 function getNameAndBalance(element: number) {
+    let search: string;
     for (let i: number = 0; i < accounts.length; i++) {
         if (accounts[i]['accountNumber'] == element) {
-            return (accounts[i]['clientName'] + ' ' + accounts[i]['balance']);
+            search = (accounts[i]['clientName'] + ' ' + accounts[i]['balance']);
+            break;
         } else if (accounts.indexOf([i]['accountNumber']) == -1) {
-            return ('404 - account not found');
+            search = ('404 - account not found');
         }
     }
+    console.log(search);
 }
-console.log(getNameAndBalance(11234543));
+getNameAndBalance(11234543);
+
+function transferAmount(list: any, to: number, from: number, amount: number) {
+    let error: string;
+    for (let j: number = 0; j < list.length; j++) {
+        if (list[j]['accountNumber'] == to) {
+            list[j]['balance'] = list[j]['balance'] + amount;
+        } else if (list[j]['accountNumber'] == from) {
+            list[j]['balance'] = list[j]['balance'] - amount;
+        } else if (list.indexOf([j]['accountNumber']) !== to || list.indexOf([j]['accountNumber']) !== from) {
+            error = ('404 - account not found');
+        }
+    }
+    console.log(list);
+}
+transferAmount(accounts, 43546731, 23456311, 500.0);
+
+
 // Create function that returns the name and balance of cash on an account in a list
 // getNameAndBalance(11234543);
 // should return: ['Igor', 203004099.2]
@@ -28,7 +48,7 @@ console.log(getNameAndBalance(11234543));
 //
 // Log "404 - account not found" if any of the account numbers don't exist to the console.
 // transferAmount(accounts, 43546731, 23456311, 500.0);
-//After printing the "accounts" it should look like:
+// After printing the "accounts" it should look like:
 // const accounts = [
 //	{ clientName: 'Igor', accountNumber: 11234543, balance: 203004099.2 },
 //	{ clientName: 'Vladimir', accountNumber: 43546731, balance: 5204099571.23 },
