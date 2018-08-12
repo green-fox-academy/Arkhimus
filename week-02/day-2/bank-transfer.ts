@@ -20,7 +20,7 @@ function getNameAndBalance(element: number) {
 }
 getNameAndBalance(11234543);
 
-function transferAmount(list: any, to: number, from: number, amount: number) {
+function transferAmount(list: any [], to: number, from: number, amount: number) {
     for (let j: number = 0; j < list.length; j++) {
         if (list[j]['accountNumber'] == to) {
             list[j]['balance'] = list[j]['balance'] + amount;
