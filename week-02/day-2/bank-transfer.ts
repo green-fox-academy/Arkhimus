@@ -9,14 +9,13 @@ const accounts: any[] = [
 function getNameAndBalance(element: number) {
     for (let i: number = 0; i < accounts.length; i++) {
         if (accounts[i]['accountNumber'] == element) {
-            //return accounts[i]['clientName'], accounts[i]['balance'];
-            console.log(accounts[i]['clientName'], accounts[i]['balance']);
-        } else {
-            console.log('wtf');
+            return (accounts[i]['clientName'] + ' ' + accounts[i]['balance']);
+        } else if (accounts.indexOf([i]['accountNumber']) == -1) {
+            return ('404 - account not found');
         }
     }
 }
-getNameAndBalance(11234543);
+console.log(getNameAndBalance(11234543));
 // Create function that returns the name and balance of cash on an account in a list
 // getNameAndBalance(11234543);
 // should return: ['Igor', 203004099.2]
