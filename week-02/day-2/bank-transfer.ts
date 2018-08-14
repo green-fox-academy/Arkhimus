@@ -1,34 +1,47 @@
 'use strict';
 
 const accounts: any[] = [
-    { clientName: 'Igor', accountNumber: 11234543, balance: 203004099.2 },
-    { clientName: 'Vladimir', accountNumber: 43546731, balance: 5204100071.23 },
-    { clientName: 'Sergei', accountNumber: 23456311, balance: 1353600.0 }
+  { clientName: 'Igor', accountNumber: 11234543, balance: 203004099.2 },
+  { clientName: 'Vladimir', accountNumber: 43546731, balance: 5204100071.23 },
+  { clientName: 'Sergei', accountNumber: 23456311, balance: 1353600.0 }
 ];
 
 function getNameAndBalance(element: number) {
-    let search: string;
-    for (let i: number = 0; i < accounts.length; i++) {
-        if (accounts[i]['accountNumber'] == element) {
-            search = (accounts[i]['clientName'] + ' ' + accounts[i]['balance']);
-            break;
-        } else if (accounts.indexOf([i]['accountNumber']) == -1) {
-            search = ('404 - account not found');
-        }
+  let search: string;
+  for (let i: number = 0; i < accounts.length; i++) {
+    if (accounts[i]['accountNumber'] == element) {
+      search = (accounts[i]['clientName'] + ' ' + accounts[i]['balance']);
+      break;
+    } else if (accounts.indexOf([i]['accountNumber']) == -1) {
+      search = ('404 - account not found');
     }
-    console.log(search);
+  }
+  console.log(search);
 }
 getNameAndBalance(11234543);
 
-function transferAmount(list: any [], to: number, from: number, amount: number) {
-    for (let j: number = 0; j < list.length; j++) {
-        if (list[j]['accountNumber'] == to) {
-            list[j]['balance'] = list[j]['balance'] + amount;
-        } else if (list[j]['accountNumber'] == from) {
-            list[j]['balance'] = list[j]['balance'] - amount;
-        }
-    } 
+function transferAmount(list: any[], to: number, from: number, amount: number) {
+  let shit: number = 0;
+  for (let j: number = 0; j < list.length; j++) {
+    if (list[j]['accountNumber'] != to) {
+      shit += 1;
+    }
+  }
+  for (let j: number = 0; j < list.length; j++) {
+    if (list[j]['accountNumber'] == to) {
+      list[j]['balance'] += amount;
+    } else if (list[j]['accountNumber'] == from) {
+      list[j]['balance'] -= amount;
+
+    }
+  }
+  console.log(shit);
+  if (shit == list.length) {
+    console.log('404 - account not found');
+  } else {
     console.log(list);
+  }
+
 }
 transferAmount(accounts, 43546731, 23456311, 500.0);
 
