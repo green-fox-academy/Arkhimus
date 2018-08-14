@@ -15,4 +15,4 @@ function readAndPrint(filename: string): string {
     throw new Error('Unable to read file: my-file.txt');
   }
 }
-console.log(readAndPrint('my-file.txt'));
+console.log(readAndPrint('my-file2.txt'));
