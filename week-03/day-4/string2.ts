@@ -2,8 +2,6 @@
 
 'use strict'
 
-'xxxyyyxyxyxxxxyyyyyxyxyxyyy'
-
 function removeX(remove: string): string{
   if (remove.indexOf('x')=== -1){
     return remove;
