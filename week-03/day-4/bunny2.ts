@@ -6,13 +6,13 @@
 'use strict'
 
 function bunnyEarsZwei(bunnies: number): number {
-  if (bunnies === 1) {
+  if (bunnies === 0) {
     return 0;
   } else if (bunnies % 2 === 0) {
     return 3 + bunnyEarsZwei(bunnies - 1);
   } else {
-    return 0 + bunnyEarsZwei(bunnies - 1);
+    return 2 + bunnyEarsZwei(bunnies - 1);
   }
 }
 
-console.log(bunnyEarsZwei(10));
+console.log(bunnyEarsZwei(12));
