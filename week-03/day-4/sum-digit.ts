@@ -4,16 +4,15 @@
 
 'use strict'
 
-function sumDigits(sumDis: number): any {
-  if (sumDis < 0) {
-    throw new Error('Gimme positive numba braw pls');
+function sumDigits(sumThis: number): any {
+  if (sumThis < 0) {
+    throw new Error('Gimme positive numba bro pls');
   }
-  if (sumDis < 10) {
-    return sumDis;
+  if (sumThis < 10) {
+    return sumThis;
   } else {
-    return (sumDis%10) + sumDigits(Math.floor(sumDis/10));
+    return (sumThis % 10) + sumDigits(Math.floor(sumThis / 10));
   }
 }
-console.log(sumDigits(3262568));
-
+console.log(sumDigits(23423));
 

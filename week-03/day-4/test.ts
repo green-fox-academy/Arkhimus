@@ -1,10 +1,11 @@
 'use strict'
 
-console.log('xxxyyyxyxyxxxxyyyyyxyxyxyyy'.indexOf('xxxyyyxyxyxxxxyyyyyxyxyxyyy'));
 
+console.log(300/0);
+let n: number = 300/0;
 
-let x: string = 'abcdefgh';
-let n: number = 0;
-
-console.log(x.slice(x.length - (x.length - n), x.length - (x.length - (n + 1))));
-
+if (n = Infinity){
+  console.log('jess');
+} else {
+  console.log('nope');
+}

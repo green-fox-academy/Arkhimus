@@ -19,3 +19,10 @@ function addNumber(n: number): number{
 }
 
 console.log(addNumber(3545));
+
+let size: number = canvas.width;
+let numberOfSomething: number = 12312412;
+
+function drawSquares(size: number, num: number){
+  
+}
