@@ -14,5 +14,5 @@ function sumDigits(sumThis: number): any {
     return (sumThis % 10) + sumDigits(Math.floor(sumThis / 10));
   }
 }
-console.log(sumDigits(23423));
+console.log(sumDigits(2002));
 
