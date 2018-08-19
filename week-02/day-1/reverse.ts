@@ -6,11 +6,11 @@
 // -  Print the elements of the reversed `numList`
 
 let numList: number[] = [3, 4, 5, 6, 7];
-numList.reverse();
+console.log(numList.reverse());
 
-let tempArr: number[];
-for (let i: number = numList.length; i >= 0; i--) {
-    tempArr.push(numList[i]);
+
+let tempNumList: number[] = [];
+for (let i: number = numList.length - 1; i >= 0; i--) {
+    tempNumList.push(numList[i]);
 }
-
-console.log(numList);
+console.log(tempNumList);
