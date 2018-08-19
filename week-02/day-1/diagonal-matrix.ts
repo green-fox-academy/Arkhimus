@@ -11,3 +11,18 @@
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
 
+let matrix: number[][] = [];
+let lineCount: number = 4;
+
+for (let i: number = 0; i < lineCount; i++) {
+  matrix[i] = [];
+  for (let j: number = 0; j < lineCount; j++) {
+    if (j === lineCount - 1 - i) {
+      matrix[i][j] = 1;
+    } else {
+      matrix[i][j] = 0;
+    }
+  }
+  console.log(matrix);
+  matrix[i] = null;
+}
