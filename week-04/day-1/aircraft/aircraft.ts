@@ -2,38 +2,36 @@ import { Carrier } from "./carrier";
 
 'use strict'
 
-export class Aircraft{
+export class Aircraft {
   public name: string
   public maxAmmo: number;
   public baseDamage: number;
   public currentAmmo: number;
 
-  constructor(name: string, currentAmmo: number = 0, baseDamage: number, maxAmmo: number){
+  constructor(name: string, currentAmmo: number = 0, baseDamage: number, maxAmmo: number) {
     this.name = name;
-    this.currentAmmo =currentAmmo;
+    this.currentAmmo = currentAmmo;
     this.baseDamage = baseDamage;
     this.maxAmmo = maxAmmo;
   }
-  fight(){
+  fight() {
     this.maxAmmo = 0;
     return this.baseDamage * this.currentAmmo;
   }
-  refill(fill: number){
-    if (fill > this.maxAmmo + this.currentAmmo){
+  refill(fill: number) {
+    if (fill > this.maxAmmo + this.currentAmmo) {
       return this.currentAmmo = this.maxAmmo;
     } else {
       return this.currentAmmo = fill + this.currentAmmo;
     }
   }
-  getType(){
+  getType() {
     return `${this.name}`;
   }
-  getStatus(){
-    return `Type ${this.name}, Ammo: ${this.maxAmmo}, Base Damage: ${this.baseDamage}, All Damage: ${this.maxAmmo * this.baseDamage}`
+  getStatus() {
+    return `Type ${this.name}, Ammo: ${this.maxAmmo}, Base Damage: ${this.baseDamage}, All Damage: ${this.maxAmmo * this.baseDamage}`;
   }
-  isPriority(){
-    if (this.name == 'f35'){
-      return true;
-    }
+  isPriority() {
+    return this.name == 'F35';
   }
 }

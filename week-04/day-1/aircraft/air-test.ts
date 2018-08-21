@@ -10,6 +10,9 @@ let plane2: F35 = new F35 ();
 
 
 console.log(plane1, plane2);
-plane1.refill(4);
-plane2.refill(200);
+plane1.refill(73);
+plane2.refill(10);
 console.log(plane1,plane2);
+console.log(plane1.getStatus());
+console.log(plane2.getStatus());
+console.log(plane2.isPriority());
