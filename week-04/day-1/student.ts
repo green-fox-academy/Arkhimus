@@ -7,7 +7,7 @@ export class Student extends Person {
   private previousOrganization: string;
   private skippedDays: number;
 
-  constructor(name: string, age: number, gender: string, previousOrganization: string = 'The School of Life', skippedDays: number) {
+  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female', previousOrganization: string = 'The School of Life') {
     super(name, age, gender); // ezt a personre amit hoz magával a másik classból
     this.previousOrganization = previousOrganization; // innentől lehet kiegészíteni a jelenlegi class változóival
     this.skippedDays = 0;
