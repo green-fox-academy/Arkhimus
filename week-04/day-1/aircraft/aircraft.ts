@@ -14,10 +14,11 @@ export class Aircraft {
     this.baseDamage = baseDamage;
     this.maxAmmo = maxAmmo;
   }
+
   fight(): number {
-    // this.currentAmmo = 0;
-    return this.baseDamage * this.currentAmmo;
+      return this.baseDamage * this.currentAmmo;
   }
+
   refill(fill: number): number {
     if (fill > this.maxAmmo + this.currentAmmo) {
       return this.currentAmmo = this.maxAmmo;
@@ -25,13 +26,16 @@ export class Aircraft {
       return this.currentAmmo = fill + this.currentAmmo;
     }
   }
+
   getType(): string {
     return `${this.name}`;
   }
+
   getStatus(): string {
     return `Type ${this.name}, Ammo: ${this.maxAmmo}, Base Damage: ${this.baseDamage}, All Damage: ${this.maxAmmo * this.baseDamage}`;
   }
+
   isPriority(): boolean {
-    return this.name == 'F35';
+    return this.name === 'F35';
   }
 }

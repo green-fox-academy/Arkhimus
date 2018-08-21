@@ -9,11 +9,12 @@ let plane1: Aircraft = new F16 ();
 let plane2: F35 = new F35 ();
 
 
-// console.log(plane1, plane2);
+console.log(plane1, plane2);
 plane1.refill(73);
 plane2.refill(12);
-// console.log(plane1,plane2);
-// console.log(plane1.getStatus());
+console.log(plane1,plane2);
+console.log(plane1.getStatus());
 console.log(plane2.getStatus());
-// console.log(plane2.isPriority());
+console.log(plane2.isPriority());
 console.log(plane2.fight());
+console.log(plane2);
