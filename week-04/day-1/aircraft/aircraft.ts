@@ -15,7 +15,7 @@ export class Aircraft {
     this.maxAmmo = maxAmmo;
   }
   fight() {
-    this.maxAmmo = 0;
+    // this.currentAmmo = 0;
     return this.baseDamage * this.currentAmmo;
   }
   refill(fill: number) {
