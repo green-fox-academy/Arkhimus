@@ -10,8 +10,8 @@ export class Cohort {
 
   constructor(name: string) {
     this.name = name;
-    this.students = [];
-    this.mentors = [];
+    this.students;
+    this.mentors;
   }
   addStudent(Student) {
     this.students.push();

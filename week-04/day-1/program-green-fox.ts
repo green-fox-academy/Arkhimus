@@ -14,22 +14,22 @@ people.push(mark);
 let jane: Person = new Person();
 people.push(jane);
 
-let john: Person = new Student("John Doe", 20, "male", "BME");
+let john: Student = new Student("John Doe", 20, "male", "BME");
 people.push(john);
 
-let student: Person = new Student();
+let student: Student = new Student();
 people.push(student);
 
-let gandhi: Person = new Mentor("Gandhi", 148, "male", "senior");
+let gandhi: Mentor = new Mentor("Gandhi", 148, "male", "senior");
 people.push(gandhi);
 
-let mentor: Person = new Mentor();
+let mentor: Mentor = new Mentor();
 people.push(mentor);
 
-let elon: Person = new Sponsor("Elon Musk", 46, "male", "SpaceX");
+let elon: Sponsor = new Sponsor("Elon Musk", 46, "male", "SpaceX");
 people.push(elon);
 
-let sponsor: Person = new Sponsor();
+let sponsor: Sponsor = new Sponsor();
 people.push(sponsor);
 
 student.skipDays(3);
