@@ -3,22 +3,23 @@ import { Carrier } from "./carrier";
 'use strict'
 
 export class Aircraft{
-  name: string
-  maxAmmo: number;
-  baseDamage: number;
+  private name: string
+  private maxAmmo: number;
+  private baseDamage: number;
+  private currentAmmo: number;
 
-  constructor(name: string, maxAmmo: number = 0, baseDamage: number){
+  constructor(name: string, currentAmmo: number = 0, baseDamage: number){
     this.name = name;
-    this.maxAmmo = maxAmmo;
+    this.currentAmmo =currentAmmo;
     this.baseDamage = baseDamage;
   }
   fight(){
     this.maxAmmo = 0;
-    return this.baseDamage;
+    return this.baseDamage * this.currentAmmo;
   }
   refill(fill: number){
-    return fill - this.maxAmmo;
-    this.maxAmmo = this.maxAmmo;
+    this.maxAmmo = fill - this.maxAmmo;
+    return this.maxAmmo;
   }
   getType(){
     return `${this.name}`;
@@ -32,7 +33,3 @@ export class Aircraft{
     }
   }
 }
-
-let f16 = new Aircraft('F16', 8, 30);
-let f35 = new Aircraft('F35', 12, 50);
-
