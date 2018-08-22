@@ -1,25 +1,35 @@
 import { Student } from "./student";
 import { Mentor } from "./mentor";
+import { Person } from "./person";
 
-'use strict'
+'use strict';
 
 export class Cohort {
   private name: string;
-  private students: Student[];
-  private mentors: Mentor[];
+  private studentsAndDementors: Person[];
 
   constructor(name: string) {
+    this.studentsAndDementors = [];
     this.name = name;
-    this.students;
-    this.mentors;
   }
-  addStudent(Student) {
-    this.students.push();
-  }
-  addMentor(Mentor) {
 
+  addStudent( student: Student ): number {
+    return this.studentsAndDementors.push(student);
   }
-  info() {
-    console.log(`The ${this.name} cohort has ${this.students.size} students and ${this.mentors.size} mentors.`);
+
+  addMentor( mentorosKaposzta : Mentor ): number {
+    return this.studentsAndDementors.push(mentorosKaposzta);
+  }
+
+  addPerson(person: Person): number {
+    if ( person instanceof Mentor ) {
+      return this.addMentor(person);
+    } else if ( person instanceof Student ) {
+      return this.addStudent(person);
+    }
+  }
+
+  info(): void {
+    console.log(`The ${this.name} cohort has ${this.studentsAndDementors.length} mentors and students together.`);
   }
 }

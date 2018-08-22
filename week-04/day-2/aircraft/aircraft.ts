@@ -1,29 +1,34 @@
-import { Carrier } from "./carrier";
-
-'use strict'
+'use strict';
+import { F35 } from "./f35";
 
 export class Aircraft {
-  private name: string
+  private name: string;
   private maxAmmo: number;
   private baseDamage: number;
   private currentAmmo: number;
 
-  constructor(name: string, currentAmmo: number = 0, baseDamage: number, maxAmmo: number) {
+  constructor(name: string, baseDamage: number, maxAmmo: number) {
     this.name = name;
-    this.currentAmmo = currentAmmo;
+    this.currentAmmo = 0;
     this.baseDamage = baseDamage;
     this.maxAmmo = maxAmmo;
   }
 
   fight(): number {
-      return this.baseDamage * this.currentAmmo;
+    let damagePoints: number = this.damage(); 
+    this.currentAmmo = 0;
+    return damagePoints;
+  }
+
+  damage() : number {
+    return this.currentAmmo * this.baseDamage;
   }
 
   refill(fill: number): number {
-    if (fill > this.maxAmmo + this.currentAmmo) {
+    if (fill > this.maxAmmo) {
       return this.currentAmmo = this.maxAmmo;
     } else {
-      return this.currentAmmo = fill + this.currentAmmo;
+      return this.currentAmmo += fill;
     }
   }
 
@@ -36,6 +41,6 @@ export class Aircraft {
   }
 
   isPriority(): boolean {
-    return this.name === 'F35';
+    return this instanceof F35;
   }
 }
