@@ -4,10 +4,15 @@ import { StringedInstrument } from "./stringed-instruments";
 
 export class ElectricGuitar extends StringedInstrument {
 
-  constructor() {
-    super();
+  constructor(instrumentName: string = 'electric guitar', numberOfStrings: number = 6) {
+    super(instrumentName, numberOfStrings);
   }
-  sound() {
-    throw new Error("Method not implemented.");
+
+  sound(): string {
+    return 'Twang';
+  }
+
+  play(): void {
+    console.log(`The ${this.instrumentName}, has ${this.numberOfStrings} strings and goes: ${this.sound()}`);
   }
 }

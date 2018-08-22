@@ -3,11 +3,9 @@
 export abstract class Instruments {
   protected instrumentName: string;
 
-  constructor() {
-
+  constructor(instrumentName: string) {
+    this.instrumentName = instrumentName;
   }
 
-  play() {
-
-  }
+  abstract play(): void;
 }
