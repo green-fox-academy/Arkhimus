@@ -5,10 +5,10 @@ import { Aircraft } from "./aircraft";
 export class Carrier {
   private aircrafts: Aircraft[];
   private ammoStore: number;
-  private healthPoint: number;
   private currentAmmo: number;
+  private healthPoint: number;
 
-  constructor(ammoStore: number = 300, healthPoint: number = 4000) {
+  constructor(ammoStore: number = 300, currentAmmo: number, healthPoint: number = 4000) {
     this.aircrafts = [];
     this.ammoStore = ammoStore;
     this.healthPoint = healthPoint;

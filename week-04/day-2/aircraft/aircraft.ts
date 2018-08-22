@@ -3,10 +3,10 @@ import { Carrier } from "./carrier";
 'use strict'
 
 export class Aircraft {
-  public name: string
-  public maxAmmo: number;
-  public baseDamage: number;
-  public currentAmmo: number;
+  private name: string
+  private maxAmmo: number;
+  private baseDamage: number;
+  private currentAmmo: number;
 
   constructor(name: string, currentAmmo: number = 0, baseDamage: number, maxAmmo: number) {
     this.name = name;
