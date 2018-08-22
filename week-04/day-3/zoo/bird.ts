@@ -19,6 +19,6 @@ export class Bird extends Animal {
   }
 
   fly(){
-    console.log(`Hi I'm ${this.name} and I'm flying yo!!`);
+    console.log(`Hi I'm ${this.name} and I'm flying yo!!\n`);
   }
 }
