@@ -14,22 +14,22 @@ export class Carrier {
     this.healthPoint = healthPoint;
     this.currentAmmo = currentAmmo;
   }
-  add(){
+  add() {
 
   }
-  fill(){
+  fill() {
     this.ammoStore = this.ammoStore - this.currentAmmo;
-    if (this.ammoStore < this.currentAmmo){
+    if (this.ammoStore < this.currentAmmo) {
       throw ('Not enough ammo bro... :(((((');
     }
   }
-  fight(Carrier){
+  fight(Carrier) {
     Carrier.healthPoint = Carrier.healthPoint - this.Carrier.ammoStore;
-    if (Carrier.healthPoint < 1){
+    if (Carrier.healthPoint < 1) {
       console.log(`It's dead Jim :(`);
     }
   }
-  getStatus(){
+  getStatus() {
     console.log(`HP: ${this.healthPoint}, Aircraft count: ${this.aircrafts.length}, Ammo storage: ${this.ammoStore}, 
     Total damage: ${this.currentAmmo}, Aircrafts: ${this.aircrafts}`);
   }

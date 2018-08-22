@@ -17,6 +17,7 @@ export class Aircraft {
 
   fight(): number {
       return this.baseDamage * this.currentAmmo;
+      this.currentAmmo = 0;
   }
 
   refill(fill: number): number {
