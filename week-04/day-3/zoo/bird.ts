@@ -1,4 +1,5 @@
 import { Animal } from "./animals";
+import { Flyable } from "../flyable/flyable";
 
 'use strict';
 
@@ -15,5 +16,9 @@ export class Bird extends Animal {
 
   breed(): string {
     return this.breadsWith;
+  }
+
+  fly(){
+    console.log(`Hi I'm ${this.name} and I'm flying yo!!`);
   }
 }
