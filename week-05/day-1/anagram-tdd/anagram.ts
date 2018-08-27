@@ -1,9 +1,9 @@
 'use strict';
-let anagramBase: string = 'listen';
-let anagramModded: string = 'silent';
+let anagramBase: string = 'Listen';
+let anagramModded: string = 'Silent';
 
 export function anagramCompare(quote1: string, quote2: string): boolean {
-  return (quote1.split('').sort().toString() === quote2.split('').sort().toString());
+  return (quote1.toLowerCase().split('').sort().toString() === quote2.toLocaleLowerCase().split('').sort().toString());
 }
 
 anagramCompare(anagramModded, anagramBase);
