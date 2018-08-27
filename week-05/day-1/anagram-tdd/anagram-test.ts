@@ -14,6 +14,6 @@ test('is an anagram with lower/upper case bro/brotherina?', test => {
 });
 
 test('is the input null bro/brotherina?', test => {
-  test.equal(anagramCompare('Listen', null), false);
+  test.throws(anagramCompare('Listen', null), TypeError);
   test.end();
 });
