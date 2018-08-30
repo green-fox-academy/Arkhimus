@@ -21,18 +21,27 @@ let numbers: number = 0;
 let tempArray: string[] = [];
 
 let partToErease = /[^0-9 ]/gi;
-let contentWithoutBreaksArray: string [] = fileContent.replace(partToErease, ' ').split(' ');
-let numbersInArray: number [] = [];
+let contentWithoutBreaksArray: string[] = fileContent.replace(partToErease, ' ').split(' ');
+let numbersInArray: number[] = [];
+let multiArray: number[][] = [];
 
-// for (let i in contentWithoutBreaksArray) {
-//   numbersInArray.push(Number(fileContent.replace(partToErease, ' ').split(' ')[i]));
-// }
-
-for (let i in contentWithoutBreaksArray){
-  if (contentWithoutBreaksArray[i] !== ''){
+// single line array
+for (let i in contentWithoutBreaksArray) {
+  if (contentWithoutBreaksArray[i] !== '') {
     numbersInArray.push(Number(contentWithoutBreaksArray[i]));
+  }
+}
+
+// multi line array
+for (let i in contentWithoutBreaksArray) {
+  let lineCount: number = 0;
+  if (contentWithoutBreaksArray[i] !== '') {
+    multiArray[lineCount][i] = Number(contentWithoutBreaksArray[i]);
+  } else if (contentWithoutBreaksArray[i] == '') {
+    lineCount++;
   }
 }
 
 console.log(contentWithoutBreaksArray);
 console.log(numbersInArray);
+console.log(multiArray);
