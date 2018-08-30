@@ -16,7 +16,7 @@ function fileRead(fileName: string): string {
 }
 
 let fileContent = fileRead('number.txt');
-console.log(fileContent);
+// console.log(fileContent);
 let numbers: number = 0;
 let tempArray: string[] = [];
 
@@ -33,15 +33,16 @@ for (let i in contentWithoutBreaksArray) {
 }
 
 // multi line array
-for (let i in contentWithoutBreaksArray) {
-  let lineCount: number = 0;
-  if (contentWithoutBreaksArray[i] !== '') {
-    multiArray[lineCount][i] = Number(contentWithoutBreaksArray[i]);
-  } else if (contentWithoutBreaksArray[i] == '') {
-    lineCount++;
-  }
+function convertStringToMatrix(matrixString) {
+  let matrixNumber = [];
+  let matrixRows = matrixString.split('\r\n');
+  matrixRows.forEach(row =>
+    matrixNumber.push(row.split(' '))
+  );
+  return matrixNumber;
 }
 
-console.log(contentWithoutBreaksArray);
-console.log(numbersInArray);
-console.log(multiArray);
+// console.log(contentWithoutBreaksArray);
+// console.log(numbersInArray);
+// console.log(multiArray);
+console.log(convertStringToMatrix(fileContent));

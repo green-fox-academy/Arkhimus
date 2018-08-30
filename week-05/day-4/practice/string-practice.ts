@@ -27,5 +27,14 @@ function countWordLength(lines: string[]): number {
   return wordLenhtAverage / wordLength.length;
 }
 
+function convertStringToMatrix(matrixString) {
+  let matrixNumber = [];
+  let matrixRows = matrixString.split('\n');
+  matrixRows.forEach(row =>
+    matrixNumber.push(row.split(' '))
+  );
+  return matrixNumber;
+}
+
 console.log(countWordLength(contentWithoutBreaksArray));
-console.log(contentWithoutBreaks);
+console.log(convertStringToMatrix(contentWithoutBreaks));
