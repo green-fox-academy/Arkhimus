@@ -36,5 +36,15 @@ function convertStringToMatrix(matrixString) {
   return matrixNumber;
 }
 
-console.log(countWordLength(contentWithoutBreaksArray));
-console.log(convertStringToMatrix(contentWithoutBreaks));
+// console.log(countWordLength(contentWithoutBreaksArray));
+// console.log(convertStringToMatrix(contentWithoutBreaks));
+
+let str: string = 'asdas';
+let wc: number = 0;
+for (let i: number = 0; i < str.length; i++) {
+  if (str[i] == 's' && i == str.length -1) {
+    wc++;
+  }
+}
+
+console.log(wc);
