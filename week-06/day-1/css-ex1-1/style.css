@@ -1,25 +1,33 @@
+body {
+  height: 100vh;
+}
+
 .container {
   display: flex;
-  justify-content: left;
-  flex-direction: row-reverse;
+  justify-content: right;
+  flex-direction: column-reverse;
+  width: 100%;
+  height: 100%;
 }
 
 .item {
-  width: 190px;
-  height: 190px;
+  width: 380px;
 }
 
 .green {
   background: #51D400;
   flex-grow: 1;
+  order: 3;
 }
 
 .yellow {
   background: #FFD62A;
-  flex-grow: 3;
+  flex-grow: 2;
+  order: 1;
 }
 
 .purple {
   background: #B02AFF;
   flex-grow: 1;
+  order: 2;
 }
