@@ -6,9 +6,12 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  justify-content: space-between;
 }
 
-.item {
+/* exercise 3.1 */
+
+/* .item {
   background: #B02AFF;
   width: 108px;
   height: 108px;
@@ -16,4 +19,15 @@
   align-self: center;
   list-style: none;
   margin: 0px 10px 0px 0px;
+} */
+
+/* exercise 3.2 */
+
+.item {
+  background: #B02AFF;
+  width: 108px;
+  height: 108px;
+  align-self: center;
+  list-style: none;
+
 }
