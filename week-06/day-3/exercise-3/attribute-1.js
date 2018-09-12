@@ -6,4 +6,7 @@ imgUrl.src = "https://study.com/cimages/multimages/16/gray_wolf_5584759091_wikim
 
 let newLink = document.querySelector('a');
 newLink.href = "https://www.greenfoxacademy.com/";
-console.log(newLink.href);
+
+let secondButton = document.getElementsByClassName('this-one')[0];
+secondButton.disabled = true;
+secondButton.innerText = 'No no Mr. Super Man, there is no click here';
