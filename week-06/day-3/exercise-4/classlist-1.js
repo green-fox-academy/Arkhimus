@@ -12,8 +12,4 @@ if (allP[0].classList.contains('apple')) {
 
 allP[0].classList.add('red');
 
-for (let i = 0; i < allP.length; i++) {
-  if (allP[i].classList.contains('balloon')) {
-    allP[i].setAttribute('style', 'border-radius: 10%;')
-  }
-}
+allP[1].style.borderRadius = '10%';
