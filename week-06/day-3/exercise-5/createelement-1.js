@@ -1,6 +1,7 @@
 'use strict';
 
 let asteroidList = document.querySelector('ul.asteroids');
+let heading = document.querySelector('div.container');
 
 let newAsteroidGreenFox = document.createElement('li');
 newAsteroidGreenFox.id = 'b555';
@@ -13,7 +14,6 @@ newAsteroidLamp.textContent = 'The Lamplighter';
 asteroidList.appendChild(newAsteroidGreenFox);
 asteroidList.appendChild(newAsteroidLamp);
 
-let heading = document.querySelector('div.container');
 
 let newHeading = document.createElement('h1');
 newHeading.id = 'heading1orWhatever';
