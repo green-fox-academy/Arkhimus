@@ -13,12 +13,11 @@ const todos = [
 ];
 
 app.get('/', (res, req) => {
-  let eachTodo = [];
-  for (let i = 0; i < todos.length; i++) {
-    eachTodo += todos[i];
-  }
-})
+  res.render('home', {
+    todo: todos,
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server is at: ${PORT}`);
-})
+});
