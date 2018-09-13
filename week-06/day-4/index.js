@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const PORT = 3000;
 
@@ -10,11 +11,9 @@ app.get('/ping', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.json({
-    message: 'Cannot GET /',
-  });
+  res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is at port: ${PORT}`)
+  console.log(`Server is at port: ${PORT}`);
 });
