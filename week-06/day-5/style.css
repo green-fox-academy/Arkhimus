@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  background-color: darkgrey;
+  justify-content: center;
+  margin-top: 7%;
+}
+
+.container {
+  display: flex;
+  background: #FFD62A;
+  width: 640px;
+  height: 480px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.button {
+  background: whitesmoke;
+  width: 35px;
+  height: 100%;
+  align-self: center;
+  list-style: none;
+  border: none;
+  cursor: pointer;
+}
+
+.left-arrow {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.right-arrow {
+
+  transform: rotate(180deg);
+}
