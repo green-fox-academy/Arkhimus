@@ -81,17 +81,19 @@ function summarize(num) {
 app.post('/dountil/:action', (req, res) => {
   let action = req.params.action;
   let until = req.body.until;
-  if (action === 'factor') {
-    res.json({
-      "result": factorialize(until),
-    });
-  } else if (action === 'sum') {
-    res.json({
-      "result": summarize(until),
-    });
+  if (until) {
+    if (action === 'factor') {
+      res.json({
+        "result": factorialize(until),
+      });
+    } else if (action === 'sum') {
+      res.json({
+        "result": summarize(until),
+      });
+    }
   } else {
     res.json({
-      "error": "Please provide a number!"
+      "error": "Please provide what to do with the numbers!"
     });
   }
 });
