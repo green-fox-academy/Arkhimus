@@ -13,6 +13,10 @@ app.get('/', (req,res) => {
   res.send('All right baby!');
 });
 
+app.post('/sith', (req,res) => {
+  let text = req.body.text;
+});
+
 app.listen(PORT, () => {
   console.log(`Server is uuuup dude at port: ${PORT}`);
 });
