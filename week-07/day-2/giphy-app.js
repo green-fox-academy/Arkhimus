@@ -2,8 +2,17 @@
 
 const express = require('express');
 const fetch = require('node-fetch');
+const path = require('path');
+const cors = require('cors');
 const app = express();
 const PORT = 3030;
+
+app.use(cors());
+app.use('/assets', express.static('assets'));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'giphy.html'));
+});
 
 app.get('/api/giphy/', (req, res) => {
   let url = [
@@ -13,10 +22,10 @@ app.get('/api/giphy/', (req, res) => {
   ].join('');
 
   fetch(url)
-  .then((resp) => (resp.json()))
-  .then(response => {
-    res.json(response);
-  });
+    .then((resp) => (resp.json()))
+    .then(response => {
+      res.json(response);
+    });
 });
 
 app.listen(PORT, () => {
