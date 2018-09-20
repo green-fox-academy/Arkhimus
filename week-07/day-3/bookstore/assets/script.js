@@ -28,22 +28,27 @@ window.onload = () => {
 
         let newBookTitle = document.createElement('td');
         newBookTitle.innerText = book.book_name;
+        newBookTitle.classList.add('BookTitle');
         newRow.appendChild(newBookTitle);
 
         let newBookAuthor = document.createElement('td');
         newBookAuthor.innerText = book.aut_name;
+        newBookAuthor.classList.add('BookAuthor');
         newRow.appendChild(newBookAuthor);
 
         let newCategory = document.createElement('td');
         newCategory.innerText = book.cate_descrip;
+        newCategory.classList.add('BookCategory');
         newRow.appendChild(newCategory);
 
         let newPublisher = document.createElement('td');
         newPublisher.innerText = book.pub_name;
+        newPublisher.classList.add('BookPublisher');
         newRow.appendChild(newPublisher);
 
         let newPrice = document.createElement('td');
         newPrice.innerText = book.book_price;
+        newPrice.classList.add('BookPrice');
         newRow.appendChild(newPrice);
 
         let table = document.querySelector('#tableId');

@@ -8,12 +8,15 @@ const app = express();
 const PORT = 3030;
 
 app.use(cors());
+
+// useing the front-end JS file
 app.use('/assets', express.static('assets'));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// useing the mysql thingie
 let conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -30,6 +33,7 @@ conn.connect(function (err) {
   console.log('Connection established');
 });
 
+// requiring mysql data
 app.get('/api/books', (req, res) => {
   conn.query(`SELECT book_name, aut_name, cate_descrip, pub_name, book_price FROM book_mast 
     INNER JOIN author ON book_mast.aut_id=author.aut_id 
