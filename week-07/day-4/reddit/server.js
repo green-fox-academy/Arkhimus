@@ -26,9 +26,20 @@ conn.connect(function (err) {
   console.log('Connected to mysql databasemadafaaaaaa...');
 })
 
+app.get('/api/posts', (req, res) => {
+  conn.query(`SELECT * FROM posts`, (err, result) => {
+    if (err) {
+      console.log('failed', err.message);
+    } else {
+      console.log(result);
+    }
+    res.status(200).json(result);
+  });
+});
+
 app.post('/api/posts', jsonParser, (req, res) => {
-  if (req.body.title && req.body.url && res.statusCode === 200) {
-    conn.query(`INSERT INTO posts(title, url) VALUES ('${req.body.title}', '${req.body.url}');`, (err, result) => {
+  if (req.body.title && req.body.url && req.body.user && res.statusCode === 200) {
+    conn.query(`INSERT INTO posts(title, url, user) VALUES ('${req.body.title}', '${req.body.url}', '${req.body.user}');`, (err, result) => {
       if (err) {
         console.log('failure', err.message);
         return;
@@ -68,7 +79,7 @@ app.post('/api/posts', jsonParser, (req, res) => {
 //   }
 // });
 
-app.put(`/posts/:id/:action`, jsonParser, (req, res) => {
+app.put(`/posts/:id/:action`, (req, res) => {
   let addVote = '';
   if (req.params.action === 'upvote') {
     addVote = '+';
@@ -86,17 +97,11 @@ app.put(`/posts/:id/:action`, jsonParser, (req, res) => {
   });
 });
 
-
-app.get('/api/posts', (req, res) => {
-  conn.query(`SELECT * FROM posts`, (err, result) => {
-    if (err) {
-      console.log('failed', err.message);
-    } else {
-      console.log(result);
-    }
-    res.status(200).json(result);
+app.delete('/posts/:id', (req, res) => {
+  conn.query(`DELETE FROM posts WHERE id=${req.params.id};`, (err, result) => {
+    res.status(404).json('whateverdude');
   });
-});
+}); 
 
 app.listen(PORT, () => {
   console.log(`Server iz runna at ${PORT} boiz`);
