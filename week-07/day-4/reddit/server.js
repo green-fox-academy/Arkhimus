@@ -26,30 +26,47 @@ conn.connect(function (err) {
   console.log('Connected to mysql databasemadafaaaaaa...');
 })
 
-app.get('/', (req, res) => {
-  res.send('okeyzie');
-});
-
-
-
-
 app.post('/api/posts', jsonParser, (req, res) => {
-  if (req.body.title && req.body.url) {
-    conn.query(`INSERT INTO posts(title, url) VALUES ('${req.body.title}', '${req.body.url}')`, (err, result) => {
+  if (req.body.title && req.body.url && res.statusCode === 200) {
+    conn.query(`INSERT INTO posts(title, url) VALUES ('${req.body.title}', '${req.body.url}');`, (err, result) => {
       if (err) {
         console.log('failure', err.message);
         return;
       }
       conn.query(`SELECT * FROM posts WHERE id=${result.insertId}`, (error, fullResult) => {
-        res.json(fullResult);
+        res.status(200).json(fullResult);
       });
     });
   }
 });
 
-// app.put(`/posts/${req.body.id}/upvote`, jsonParser, (req, res) => {
+app.put(`/posts/:id/upvote`, jsonParser, (req, res) => {
+  if (req.body.title && req.body.url && res.statusCode === 200) {
+    conn.query(`UPDATE posts SET score = score + 1 WHERE id=${req.params.id};`, (err, result) => {
+      if (err) {
+        console.log('failure', err.message);
+        return;
+      }
+      conn.query(`SELECT * FROM posts WHERE id=${req.params.id}`, (error, voteResult) => {
+        res.status(200).json(voteResult);
+      });
+    });
+  }
+});
 
-// });
+app.put(`/posts/:id/downvote`, jsonParser, (req, res) => {
+  if (req.body.title && req.body.url && res.statusCode === 200) {
+    conn.query(`UPDATE posts SET score = score - 1 WHERE id=${req.params.id};`, (err, result) => {
+      if (err) {
+        console.log('failure', err.message);
+        return;
+      }
+      conn.query(`SELECT * FROM posts WHERE id=${req.params.id}`, (error, voteResult) => {
+        res.status(200).json(voteResult);
+      });
+    });
+  }
+});
 
 app.get('/api/posts', (req, res) => {
   conn.query(`SELECT * FROM posts`, (err, result) => {
@@ -58,7 +75,7 @@ app.get('/api/posts', (req, res) => {
     } else {
       console.log(result);
     }
-    res.json(result);
+    res.status(200).json(result);
   });
 });
 
