@@ -101,7 +101,21 @@ app.delete('/posts/:id', (req, res) => {
   conn.query(`DELETE FROM posts WHERE id=${req.params.id};`, (err, result) => {
     res.status(404).json('whateverdude');
   });
-}); 
+});
+
+app.put('/posts/:id', jsonParser, (req,res) => {
+  if (req.body.title && req.body.url && res.statusCode === 200) {
+    conn.query(`UPDATE posts SET title = '${req.body.title}', url = '${req.body.url}' WHERE id=${req.params.id};`, (err, result) => {
+      if (err) {
+        console.log('failure', err.message);
+        return;
+      }
+      conn.query(`SELECT * FROM posts WHERE id=${req.params.id}`, (error, fullResult) => {
+        res.status(200).json(fullResult);
+      });
+    });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Server iz runna at ${PORT} boiz`);
