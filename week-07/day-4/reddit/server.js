@@ -75,7 +75,7 @@ app.put(`/posts/:id/:action`, jsonParser, (req, res) => {
   } else if (req.params.action === 'downvote') {
     addVote = '-';
   }
-  conn.query(`UPDATE posts SET score = score ${addVote} 1 WHERE id=${req.params.id};`, (err, result) => {
+  conn.query(`UPDATE posts SET score = score ${addVote} 1, vote = ${addVote}1 WHERE id=${req.params.id};`, (err, result) => {
     if (err) {
       console.log('failure', err.message);
       return;
