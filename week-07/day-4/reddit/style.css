@@ -3,10 +3,8 @@
   display: flex;
   max-width: 100%;
   min-width: 30%;
-  justify-content: center;
   background-position: center;
   background-size: center;
-  position: fixed;
 }
 
 h1 {
@@ -16,4 +14,28 @@ h1 {
   font-size: 5em;
   font-family: 'Lato', sans-serif;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.content {
+  display: flex;
+  max-width: 100%;
+  min-width: 30%;
+  background-color: blue;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.postList {
+  background-color: brown;
+  margin: 20px;
+  flex-basis: 20%;
+  align-self: center;
+}
+
+.properties {
+  background-color: green;
+  margin: 20px;
+  max-height: 600px;
+  flex-basis: 45%;
+
 }
