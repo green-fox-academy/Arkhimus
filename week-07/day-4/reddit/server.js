@@ -26,7 +26,7 @@ conn.connect(function (err) {
   console.log('Connected to mysql databasemadafaaaaaa...');
 })
 
-app.get('/api/posts', (req, res) => {
+app.get('/posts', (req, res) => {
   conn.query(`SELECT * FROM posts`, (err, result) => {
     if (err) {
       console.log('failed', err.message);
@@ -37,7 +37,7 @@ app.get('/api/posts', (req, res) => {
   });
 });
 
-app.post('/api/posts', jsonParser, (req, res) => {
+app.post('/posts', jsonParser, (req, res) => {
   if (req.body.title && req.body.url && req.body.user && res.statusCode === 200) {
     conn.query(`INSERT INTO posts(title, url, user) VALUES ('${req.body.title}', '${req.body.url}', '${req.body.user}');`, (err, result) => {
       if (err) {
