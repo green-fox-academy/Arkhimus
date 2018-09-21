@@ -3,12 +3,18 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
+const path = require('path');
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const app = express();
 const PORT = 4040;
 
 app.use(cors());
+app.use('/assets', express.static('assets'));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 let conn = mysql.createConnection({
   host: 'localhost',
