@@ -5,7 +5,8 @@
   min-width: 30%;
   justify-content: center;
   background-position: center;
-  background-size: cover;
+  background-size: center;
+  position: fixed;
 }
 
 h1 {
