@@ -1,0 +1,18 @@
+.wrapper {
+  background: url("./dw.jpg");
+  display: flex;
+  max-width: 100%;
+  min-width: 30%;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  align-self: center;
+  font-weight: 300;
+  color: rgb(233, 233, 233);
+  font-size: 5em;
+  font-family: 'Lato', sans-serif;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}

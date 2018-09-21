@@ -25,7 +25,6 @@ window.onload = () => {
       booksName.forEach(book => {
 
         let newRow = document.createElement('tr');
-
         let newBookTitle = document.createElement('td');
         newBookTitle.innerText = book.book_name;
         newBookTitle.classList.add('BookTitle');
