@@ -38,3 +38,22 @@ tape.test('Is it a hand?', t => {
   t.notOk(card.handCheck(hand), 'You have no cards, you can not play');
   t.end();
 });
+
+tape.test('No double cards', t =>{
+  let hand = ['2D', '4C', 'TC', 'AH', 'QS'];
+  t.equal(card.noDouble(hand), undefined, 'You have no double cards.');
+  t.end();
+});
+
+tape.test('No double cards', t =>{
+  let hand = ['2D', '4C', '4C', 'AH', 'QS'];
+  t.notOk(card.noDouble(hand), 'You have DOUBLE cards.');
+  t.end();
+});
+
+/*
+tape.test('Is it bigger?', t =>{
+  let whiteHand = ['2D','3D','4D','5D','6D',];
+  let whiteHand = ['2D','3D','4D','5D','6D',];
+});
+*/
