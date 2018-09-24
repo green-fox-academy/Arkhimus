@@ -9,16 +9,26 @@ function handCheck(hand) {
   return hand.length === 5;
 }
 
-//let hand4 = ['2D', '4C', 'TC', 'AH', 'QS'];
-//let hand5 = ['9D','8D','4D','5D','6D',];
-function noDouble(hand){
+function noDouble(hand) {
   let sortedHand = hand.sort();
   sortedHand.forEach((element, index) => {
-    return element[index] == element[index+1];
+    return element[index] == element[index + 1];
   });
 }
 
+function cardValue(card) {
+  const cardIndex = [2, 3, 4, 5, 6, 7, 8, 9, 'T', 'J', 'Q', 'K', 'A'];
+  return cardIndex.indexOf(card[0]);
+}
 
+function higherCard(cardOne, cardTwo) {
+  if (cardValue(cardOne) > cardValue(cardTwo)) {
+    return cardValue(cardOne);
+  } else if (cardValue(cardOne) < cardValue(cardTwo)) {
+    return cardValue(cardTwo);
+  } else {
+    return 0;
+  }
+}
 
-
-module.exports = { cardCheck, handCheck, noDouble };
+module.exports = { cardCheck, handCheck, noDouble, cardValue, higherCard };

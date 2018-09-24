@@ -51,9 +51,23 @@ tape.test('No double cards', t =>{
   t.end();
 });
 
-/*
-tape.test('Is it bigger?', t =>{
-  let whiteHand = ['2D','3D','4D','5D','6D',];
-  let whiteHand = ['2D','3D','4D','5D','6D',];
+tape.test('Bigger card', t =>{
+  let cardIcs = 'QD';
+  let cardNi = '2D';
+  t.ok(card.higherCard(cardIcs, cardNi), 'Your card is bigger.');
+  t.end();
 });
-*/
+
+tape.test('Bigger card', t =>{
+  let cardIcs = '2D';
+  let cardNi = 'QD';
+  t.ok(card.higherCard(cardIcs, cardNi), 'Your card is bigger.');
+  t.end();
+});
+
+tape.test('Bigger card', t =>{
+  let cardIcs = '2D';
+  let cardNi = '2D';
+  t.ok(card.higherCard(cardIcs, cardNi), 'Your card is bigger.');
+  t.end();
+});
