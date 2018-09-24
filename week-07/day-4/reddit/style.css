@@ -20,6 +20,7 @@ h1 {
   display: flex;
   max-width: 100%;
   min-width: 30%;
+  height: 70vh;
   background-color: blue;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -27,15 +28,16 @@ h1 {
 
 .postList {
   background-color: brown;
-  margin: 20px;
-  flex-basis: 20%;
+  margin-top: 35px;
+  margin-left: 5%;
+  flex-basis: 45%;
   align-self: center;
 }
 
 .properties {
   background-color: green;
-  margin: 20px;
-  max-height: 600px;
-  flex-basis: 45%;
-
+  margin-top: 35px;
+  margin-right: 5%;
+  max-height: 300px;
+  flex-basis: 35%;
 }
