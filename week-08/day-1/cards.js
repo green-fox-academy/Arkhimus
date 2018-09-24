@@ -5,4 +5,8 @@ function cardCheck(checkElement) {
   return regexCards.test(checkElement);
 }
 
-module.exports = { cardCheck };
+function handCheck(hand) {
+  return hand.length === 5;
+}
+
+module.exports = { cardCheck, handCheck };
