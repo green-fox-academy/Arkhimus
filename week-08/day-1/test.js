@@ -51,23 +51,23 @@ tape.test('No double cards', t =>{
   t.end();
 });
 
-tape.test('Bigger card', t =>{
+tape.test('Bigger card FIRST', t =>{
   let cardIcs = 'QD';
   let cardNi = '2D';
   t.ok(card.higherCard(cardIcs, cardNi), 'Your card is bigger.');
   t.end();
 });
 
-tape.test('Bigger card', t =>{
+tape.test('Bigger card SECOND', t =>{
   let cardIcs = '2D';
   let cardNi = 'QD';
   t.ok(card.higherCard(cardIcs, cardNi), 'Your card is bigger.');
   t.end();
 });
 
-tape.test('Bigger card', t =>{
+tape.test('EQUAL card', t =>{
   let cardIcs = '2D';
   let cardNi = '2D';
-  t.ok(card.higherCard(cardIcs, cardNi), 'Your card is bigger.');
+  t.equal(card.higherCard(cardIcs, cardNi), 0, 'Your card is equal.');
   t.end();
 });
