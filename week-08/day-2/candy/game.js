@@ -1,7 +1,12 @@
 'use strict';
 
 const candies = document.querySelector('.candies');
+const createCandies = document.querySelector('.create-candies');
 
-console.log(candies.innerText);
+let currentCandies =  10000;
+candies.innerText = currentCandies;
 
-
+createCandies.addEventListener('click', () => {
+  currentCandies++;
+  candies.innerText = currentCandies;
+});
