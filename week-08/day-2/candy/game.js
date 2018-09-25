@@ -6,6 +6,7 @@ const createCandies = document.querySelector('.create-candies');
 const buy = document.querySelector('.buy-lollypops');
 const lollybutton = document.querySelector('.buy-lollypops');
 const speed = document.querySelector('.speed');
+const rainBabyRain = document.querySelector('.candy-machine');
 
 let currentCandies = 10000;
 let currentLollypops = lollypops.innerText;
@@ -34,6 +35,7 @@ buy.addEventListener('click', () => {
 const candiesForLollypop = () => {
   if (currentLollypops.length / 2 >= 10) {
     currentCandies = currentCandies + generateSpeed;
+    candies.innerText = currentCandies;
     candyCreation();
   }
 }
@@ -46,3 +48,8 @@ const candyCreation = () => {
 }
 
 setInterval(candiesForLollypop, 1000);
+
+rainBabyRain.addEventListener('click', () => {
+  generateSpeed = generateSpeed * 10;
+  speed.innerText = generateSpeed;
+});
