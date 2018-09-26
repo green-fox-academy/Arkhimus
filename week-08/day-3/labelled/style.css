@@ -4,19 +4,24 @@ body {
 
 .conteiner {
   display: flex;
-  flex-direction: column;
 }
 
 button {
   width: 200px;
   height: 40px;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  border: none;
 }
 
-span {
-  margin-top: 12%;
+i {
+  margin: 0px;
+  padding: 0;
   background-color: #1C242B;
-  padding: 13px;
-  width: 200px;
+  position: left;
+  width: 40px;
   height: 40px;
   border: none;
   color: white;
