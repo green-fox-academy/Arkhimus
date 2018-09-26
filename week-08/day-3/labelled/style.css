@@ -2,8 +2,22 @@ body {
   background: #313841;
 }
 
+.conteiner {
+  display: flex;
+  flex-direction: column;
+}
+
 button {
-  width: 75px;
-  height: 75px;
-  content: icon;
+  width: 200px;
+  height: 40px;
+}
+
+span {
+  margin-top: 12%;
+  background-color: #1C242B;
+  padding: 13px;
+  width: 200px;
+  height: 40px;
+  border: none;
+  color: white;
 }
