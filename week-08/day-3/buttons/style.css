@@ -1,0 +1,39 @@
+body {
+  background: #2F3060;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+.container {
+  align-content: center;
+}
+
+button {
+  width: 150px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  
+}
+
+.btn1 {
+  background-color: #4463A2;
+  border-color: #4463A2
+}
+
+.btn2 {
+  background-color: #1BAC59;
+  border-color: #1BAC59
+}
+
+.btn3 {
+  background-color: #D44433;
+  border-color: #D44433;
+}

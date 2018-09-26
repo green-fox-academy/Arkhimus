@@ -1,0 +1,33 @@
+body {
+  background-color: royalblue;
+}
+
+tbody tr {
+  justify-content: center;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #bebebe;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+table tbody td[data-currency="$"]::before {
+  content: "$ ";
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: aqua;
+  }
+
+  table {
+    color: darksalmon;
+  }
+
+  table tbody tr td {
+    text-shadow: 5px 5px 3px black;
+  }
+}
