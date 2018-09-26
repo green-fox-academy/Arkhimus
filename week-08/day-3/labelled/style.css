@@ -1,0 +1,9 @@
+body {
+  background: #313841;
+}
+
+button {
+  width: 75px;
+  height: 75px;
+  content: icon;
+}
