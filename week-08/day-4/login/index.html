@@ -10,20 +10,20 @@
 </head>
 
 <body>
-  <div class="container">
-    <p>ACCOUNT LOGIN</p>
-    <form>
-      <label for="name">USERNAME</label>
+  <form action="/" method="POST">
+    <div class="container">
+      <p class="title">ACCOUNT LOGIN</p>
+      <label class="username" for="name">USERNAME</label>
       <br>
       <input type="text" id="name" name="user_name">
       <br>
-      <label for="password">PASSWORD</label>
+      <label class="pswd" for="password">PASSWORD</label>
       <br>
       <input type="text" id="password" name="password">
-    </form>
-    <a class="forgot">Forgot Password?</a>
-    <br>
-    <button>Login</button>
+      <a class="forgot">Forgot Password?</a>
+      <br>
+      <button class="loginbtn">Login</button>
+  </form>
   </div>
 </body>
 
