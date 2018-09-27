@@ -22,4 +22,11 @@ window.onload = () => {
     signup.disabled = false;
   });
 
+  yes.addEventListener('change', () => {
+    subscribe.disabled = false;
+  });
+
+  no.addEventListener('change', () => {
+    subscribe.disabled = true;
+  });
 }
