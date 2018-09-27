@@ -30,7 +30,11 @@ window.onload = () => {
     signup.disabled = true;
   });
 
-  subscribe.addEventListener('click', () => {
+  signup.addEventListener('click', () => {
     alert('Thank you, you\'ve successfully signed up for cat facts');
+  });
+
+  subscribe.addEventListener('click', () => {
+    alert('Sigh, we still added you to the cat facts list');
   });
 }
