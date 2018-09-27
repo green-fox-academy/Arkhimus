@@ -1,7 +1,8 @@
 'use strict';
 
-const subscribe = document.querySelector('subscribe');
+window.onload = () => {
+  const subscribe = document.querySelector('.subscribe');
+  const signup = document.querySelector('.signupbtn');
 
-subscribe.addEventListener('click', () => {
-  subscribe.disabled = true;
-});
+  const
+}
