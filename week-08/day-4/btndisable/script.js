@@ -11,23 +11,23 @@ window.onload = () => {
   const no = document.querySelector('.no');
 
   dog.addEventListener('change', () => {
-    signup.disabled = false;
-  });
-
-  cat.addEventListener('change', () => {
-    signup.disabled = false;
-  });
-
-  fish.addEventListener('change', () => {
-    signup.disabled = false;
-  });
-
-  yes.addEventListener('change', () => {
     subscribe.disabled = false;
   });
 
+  cat.addEventListener('change', () => {
+    subscribe.disabled = false;
+  });
+
+  fish.addEventListener('change', () => {
+    subscribe.disabled = false;
+  });
+
+  yes.addEventListener('change', () => {
+    signup.disabled = false;
+  });
+
   no.addEventListener('change', () => {
-    subscribe.disabled = true;
+    signup.disabled = true;
   });
 
   subscribe.addEventListener('click', () => {
