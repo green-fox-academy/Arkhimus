@@ -20,10 +20,17 @@ body {
 a {
   font-size: 12px;
   float: right;
+  text-decoration: none;
+  color: black;
 }
 
 .title {
   font-size: 36px;
+}
+
+input:valid {
+  background: rgba(60, 255, 0, 0.322);
+  font-size: 14px;
 }
 
 input {
