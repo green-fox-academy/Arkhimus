@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
   <title>Movie Selector</title>
 </head>
 
@@ -12,23 +13,23 @@
   <form action="">
     <h2>Select a movie:</h2>
     <fieldset>
-      <select name="genres">
+      <select class="genreSelector" name="genres">
         <option value="">Select a genre</option>
-        <option value="scifi">Sci-fi</option>
-        <option value="drama">Drama</option>
-        <option value="comedy">Comedy</option>
+        <option class="scifiM" value="scifi">Sci-fi</option>
+        <option class="dramaM" value="drama">Drama</option>
+        <option class="comedyM" value="comedy">Comedy</option>
       </select>
-      <select name="movies">
+      <select class="movieSelector" name="movies">
         <option value="">Select a movie</option>
-        <option value="moon">Moon</option>
-        <option value="spaceodessy">2001 Space odessy</option>
-        <option value="contact">Contact</option>
-        <option value="darkes">Darkest hour</option>
-        <option value="blood">There will be blood</option>
-        <option value="beauty">American beauty</option>
-        <option value="airplane">Airplane!</option>
-        <option value="deadpool">Deadpool</option>
-        <option value="wolrd">Wayne's World</option>
+        <option class="scifi" value="moon">Moon</option>
+        <option class="scifi" value="spaceodessy">2001 Space odessy</option>
+        <option class="scifi" value="contact">Contact</option>
+        <option class="drama" value="darkes">Darkest hour</option>
+        <option class="drama" value="blood">There will be blood</option>
+        <option class="drama" value="beauty">American beauty</option>
+        <option class="comedy" value="airplane">Airplane!</option>
+        <option class="comedy" value="deadpool">Deadpool</option>
+        <option class="comedy" value="wolrd">Wayne's World</option>
       </select>
     </fieldset>
   </form>
