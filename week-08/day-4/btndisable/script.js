@@ -29,4 +29,8 @@ window.onload = () => {
   no.addEventListener('change', () => {
     subscribe.disabled = true;
   });
+
+  subscribe.addEventListener('click', () => {
+    alert('Thank you, you\'ve successfully signed up for cat facts');
+  });
 }
