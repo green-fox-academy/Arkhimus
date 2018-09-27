@@ -8,7 +8,7 @@ const lollybutton = document.querySelector('.buy-lollypops');
 const speed = document.querySelector('.speed');
 const rainBabyRain = document.querySelector('.candy-machine');
 
-let currentCandies = 10000;
+let currentCandies = 1000;
 let currentLollypops = lollypops.innerText;
 let generateSpeed = 0;
 
@@ -22,7 +22,7 @@ createCandies.addEventListener('click', () => {
   }
 });
 
-buy.addEventListener('click', () => {
+lollybutton.addEventListener('click', () => {
   currentCandies -= 100;
   candies.innerText = currentCandies;
   lollypops.innerText = `${currentLollypops}🍭`;
