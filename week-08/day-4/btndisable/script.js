@@ -1,4 +1,7 @@
 'use strict';
 
-const subscribe = document.addEventListener('subscribe');
+const subscribe = document.querySelector('subscribe');
 
+subscribe.addEventListener('click', () => {
+
+});
