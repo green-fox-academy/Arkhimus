@@ -1,0 +1,9 @@
+body {
+  display: felx;
+  flex: wrap;
+  align-content: center;
+}
+
+.container {
+  align-self: center;
+}
