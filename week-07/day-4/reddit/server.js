@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/subscribe', (req,res) => {
+  res.sendFile(path.join(__dirname, 'subscribe.html'));
+});
+
 let conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -41,10 +45,6 @@ app.get('/posts', (req, res) => {
     }
     res.status(200).json(result);
   });
-});
-
-app.get('/submit', (req,res) => {
-  
 });
 
 app.post('/posts', jsonParser, (req, res) => {
