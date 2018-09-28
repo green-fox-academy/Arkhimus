@@ -1,13 +1,17 @@
 window.onload = () => {
   const url = 'http://localhost:4040/';
-  const posts = document.querySelector('.postList')
+  const postList = document.querySelector('.postList');
+  const post = document.querySelector('.post');
 
   let allPosts = [];
 
   fetch(url + 'posts')
   .then((res) => (res.json()))
   .then(res => {
-    allPosts = res;
+    res.forEach(element => {
+      allPosts.push(element);
+      
+    });
   });
   
   
