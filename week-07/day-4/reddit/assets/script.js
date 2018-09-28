@@ -1,20 +1,19 @@
 window.onload = () => {
-  const host = 'http://localhost:4040';
-  const http = new XMLHttpRequest();
+  const url = 'http://localhost:4040/';
+  const posts = document.querySelector('.postList')
 
-  http.open('GET', `${host}`, true);
+  let allPosts = [];
 
-  http.onload = () => {
-    if (http.status === 200) {
-      const posted = JSON.parse(http.response);
-      posted.forEach(post => {
-        let newPost = document.createElement('div');
-        let newPostTitle = document.createElement('p');
-        newPostTitle.innerText = post.title;
-        newPostTitle.classList.add('PostTitle');
-        newRow.appendChild(newPost);
-      });
-    }
-  }
-  http.send();
+  fetch(url + 'posts')
+  .then((res) => (res.json()))
+  .then(res => {
+    allPosts = res;
+  });
+  
+  
+
+
+
+
+
 }
