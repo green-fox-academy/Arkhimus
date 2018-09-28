@@ -10,6 +10,7 @@ const app = express();
 const PORT = 4040;
 
 app.use(cors());
+app.use(bodyParser.urlencoded( { extended : false } ));
 app.use('/assets', express.static('assets'));
 
 app.get('/', (req, res) => {
@@ -48,15 +49,17 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', jsonParser, (req, res) => {
+  console.log(req.body);
   if (req.body.title && req.body.url && req.body.user && res.statusCode === 200) {
     conn.query(`INSERT INTO posts(title, url, user) VALUES ('${req.body.title}', '${req.body.url}', '${req.body.user}');`, (err, result) => {
       if (err) {
         console.log('failure', err.message);
         return;
       }
-      conn.query(`SELECT * FROM posts WHERE id=${result.insertId}`, (error, fullResult) => {
-        res.status(200).json(fullResult);
-      });
+      // conn.query(`SELECT * FROM posts WHERE id=${result.insertId}`, (error, fullResult) => {
+      //   res.status(200).json(fullResult);
+      // });
+      res.redirect('/subscribe');
     });
   }
 });

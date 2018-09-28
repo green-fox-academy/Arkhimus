@@ -4,24 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="subscribe.css">
+  <link rel="stylesheet" type="text/css" href="assets/subscribe.css">
   <title>New Post</title>
 </head>
 <body>
-    <form action="/" method="POST">
+    <form action="http://localhost:4040/posts" method="POST">
       <div class="container">
-        <p class="title">Submit NEW POST</p>
-        <label class="username" for="name">USERNAME</label>
+        <p class="title">SUBMIT NEW POST</p>
+        <label class="postTitle" for="title">Post title</label>
         <br>
-        <input class="nameinput"type="text" id="name" name="user_name" required>
+        <input class="nameinput"type="text" id="title" name="title" required>
         <br>
-        <label class="pswd" for="password">PASSWORD</label>
+        <label class="urlPost" for="content">Url</label>
         <br>
-        <input type="text" id="password" name="password" required>
+        <input type="text" id="url" name="url" required>
         <br>
-        <a class="forgot" href="https://media2.giphy.com/media/ne3xrYlWtQFtC/giphy.gif?cid=3640f6095baccdd7664375672ec00aac">Forgot Password?</a>
+        <label class="postTitle" for="user_name">User name</label>
         <br>
-        <button class="loginbtn">Login</button>
+        <input class="nameinput"type="text" id="user_name" name="user" required>
+        <br>
+        <a class="gif" href="https://media2.giphy.com/media/ne3xrYlWtQFtC/giphy.gif?cid=3640f6095baccdd7664375672ec00aac">a gif for u</a>
+        <br>
+        <button type="submit">Submit Post</button>
     </form>
 </body>
 </html>
