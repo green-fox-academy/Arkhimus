@@ -43,6 +43,10 @@ app.get('/posts', (req, res) => {
   });
 });
 
+app.get('/submit', (req,res) => {
+  
+});
+
 app.post('/posts', jsonParser, (req, res) => {
   if (req.body.title && req.body.url && req.body.user && res.statusCode === 200) {
     conn.query(`INSERT INTO posts(title, url, user) VALUES ('${req.body.title}', '${req.body.url}', '${req.body.user}');`, (err, result) => {

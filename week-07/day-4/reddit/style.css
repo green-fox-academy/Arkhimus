@@ -21,23 +21,26 @@ h1 {
   max-width: 100%;
   min-width: 30%;
   height: 70vh;
-  background-color: blue;
+  background-color: rgb(233, 233, 233);
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .postList {
-  background-color: brown;
+  background-color: rgb(140,140,140);
   margin-top: 35px;
   margin-left: 5%;
   flex-basis: 45%;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .properties {
   background-color: rgb(111,111,111);
+  padding: 0;
   margin-top: 35px;
   margin-right: 5%;
   max-height: 300px;
   flex-basis: 35%;
+  align-items: center;
 }
+

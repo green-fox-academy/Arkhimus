@@ -2,6 +2,7 @@ window.onload = () => {
   const url = 'http://localhost:4040/';
   const postList = document.querySelector('.postList');
   const post = document.querySelector('.post');
+  const submit = document.querySelector('.submit');
 
   let allPosts = [];
 
@@ -17,6 +18,11 @@ window.onload = () => {
       let score = document.createElement("p");
       let user = document.createElement("p");
       postDiv.classList.add('post');
+      title.classList.add('title');
+      postUrl.classList.add('postUrl');
+      date.classList.add('date');
+      score.classList.add('score');
+      user.classList.add('user_name');
       postList.appendChild(postDiv);
       postDiv.appendChild(title).innerText = element.title;
       postDiv.appendChild(postUrl).innerText = element.url;
@@ -24,11 +30,11 @@ window.onload = () => {
       postDiv.appendChild(score).innerText = element.score;
       postDiv.appendChild(user).innerText = element.user;
 
-      
-
     });
   });
   
-  
+  submit.addEventListener('click', () => {
+    location
+  });
 
 }
