@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,28 @@
   <link rel="stylesheet" type="text/css" href="assets/subscribe.css">
   <title>New Post</title>
 </head>
+
 <body>
-    <form action="http://localhost:4040/posts" method="POST" enctype="application/json">
-      <div class="container">
-        <p class="title">SUBMIT NEW POST</p>
-        <label class="postTitle" for="title">Post title</label>
-        <br>
-        <input class="nameinput"type="text" id="title" name="title" required>
-        <br>
-        <label class="urlPost" for="content">Url</label>
-        <br>
-        <input type="text" id="url" name="url" required>
-        <br>
-        <label class="postTitle" for="user_name">User name</label>
-        <br>
-        <input class="nameinput"type="text" id="user_name" name="user" required>
-        <br>
-        <a class="gif" href="https://media2.giphy.com/media/ne3xrYlWtQFtC/giphy.gif?cid=3640f6095baccdd7664375672ec00aac">a gif for u</a>
-        <br>
-        <button type="submit">Submit Post</button>
-    </form>
+  <form action="http://localhost:4040/posts" method="POST" enctype="application/json">
+    <div class="container">
+      <p class="title">SUBMIT NEW POST</p>
+      <label class="postTitle" for="title">Post title</label>
+      <br>
+      <input class="nameinput" type="text" id="title" name="title" required>
+      <br>
+      <label class="urlPost" for="content">Url</label>
+      <br>
+      <input type="url" id="url" name="url" required>
+      <br>
+      <label class="postTitle" for="user_name">User name</label>
+      <br>
+      <input class="nameinput" type="text" id="user_name" name="user" required>
+      <br>
+      <a class="gif" href="https://media2.giphy.com/media/ne3xrYlWtQFtC/giphy.gif?cid=3640f6095baccdd7664375672ec00aac">a
+        gif for u</a>
+      <br>
+      <button type="submit">Submit Post</button>
+  </form>
 </body>
+
 </html>

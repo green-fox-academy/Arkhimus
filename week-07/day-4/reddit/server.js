@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/subscribe', (req,res) => {
+app.get('/submit', (req,res) => {
   res.sendFile(path.join(__dirname, 'subscribe.html'));
 });
 
@@ -59,7 +59,7 @@ app.post('/posts', jsonParser, (req, res) => {
       // conn.query(`SELECT * FROM posts WHERE id=${result.insertId}`, (error, fullResult) => {
       //   res.status(200).json(fullResult);
       // });
-      res.redirect('/subscribe');
+      res.redirect('/submit');
     });
   }
 });

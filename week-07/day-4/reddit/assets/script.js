@@ -34,7 +34,7 @@ window.onload = () => {
   });
   
   submit.addEventListener('click', () => {
-    location.href=`${url}subscribe`;
+    location.href=`${url}submit`;
   });
 
 }
